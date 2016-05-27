@@ -1,0 +1,57 @@
+<ImageButton>:
+    cols: 1
+    rows: 1
+    text: ""
+    source: 'images/sample.png'
+    size_hint: (1,None)
+    height: '80dp'
+    Button:
+        text_size: root.width, None
+        size: self.texture_size
+        halign: 'center'
+        text: root.text
+        Image:
+            source: root.source
+            height: root.height - 10
+            y: self.parent.y + self.parent.height - self.height - 5
+            x: self.parent.x + self.parent.width/10
+
+GridLayout:
+    cols: 1
+    rows: 3
+    Label:
+        text: "SR 2 GO"
+        font_size: '50dp'
+        size_hint: (1,0.1)
+    ScrollView:
+        size_hint: (1,0.8)
+        GridLayout:
+            padding: '10dp'
+            size_hint: (1,None)
+            height: self.minimum_height
+            spacing: '10dp'
+            cols: 1
+            Label:
+                text: "Player-Tools"
+            ImageButton:
+                text: "Dossier"
+            ImageButton:
+                text: "Arsenal"
+            ImageButton:
+                text: "Run Logs"
+            ImageButton:
+                text: "Settings"
+            Label:
+                text: "GM-Tools"
+            ImageButton:
+                text: "NPC Manager"
+            ImageButton:
+                text: "Run Manager"
+            ImageButton:
+                text: "Player Manager"
+    Label:
+        text_size: root.width, None
+        size: self.texture_size
+        halign: 'center'
+        text: "Watch your back, shoot straight, conserve ammo, and never, ever, cut a deal with a dragon."
+        size_hint: (1,0.1)
