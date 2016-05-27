@@ -27,19 +27,16 @@ for idx, item in enumerate(naturalValue):
 
 attribute_body = xml.getElementsByTagName('Attribute')
 attribute_body_out = attribute_body.item(0).toprettyxml()
-attribute_body_tmp = attribute_body_out.split(os.linesep)
-for idx, line in enumerate(attribute_body_out):
-    if idx == 50:
-        attribute_body_tmp_1 = line
-        print(attribute_body_tmp_1)
-    if idx == 88:
-        attribute_body_tmp_2 = line
-        #print(attribute_body_tmp_2)
-    if idx == 6:
-        attribute_body_tmp_3 = line
-        #print(attribute_body_tmp_3)
-print(attribute_body_out)
-m = re.search('<.+?>(.+?)<.+?>', attribute_body_out)
-if m:
-    attribute_body_out = m.group(1)
-print (attribute_body_out)
+attribute_body_out = attribute_body_out.split()
+m = re.search('<.+?>(.+?)<.+?>', attribute_body_out[2])
+attribute_body_naturalValue = m.group(1)
+m = re.search('<.+?>(.+?)<.+?>', attribute_body_out[3])
+attribute_body_augmentedValue = m.group(1)
+m = re.search('<.+?>(.+?)<.+?>', attribute_body_out[4])
+attribute_body_naturalMaximum = m.group(1)
+
+print(attribute_body_naturalValue,attribute_body_augmentedValue,attribute_body_naturalMaximum)
+#m = re.search('<.+?>(.+?)<.+?>', attribute_body_out)
+#if m:
+#    attribute_body_out = m.group(1)
+#print (attribute_body_out)
