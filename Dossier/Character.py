@@ -36,7 +36,4 @@ m = re.search('<.+?>(.+?)<.+?>', attribute_body_out[4])
 attribute_body_naturalMaximum = m.group(1)
 
 print(attribute_body_naturalValue,attribute_body_augmentedValue,attribute_body_naturalMaximum)
-#m = re.search('<.+?>(.+?)<.+?>', attribute_body_out)
-#if m:
-#    attribute_body_out = m.group(1)
-#print (attribute_body_out)
+
