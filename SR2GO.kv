@@ -1,22 +1,66 @@
-<ImageButton>:
-    cols: 1
+<ImageButton@ButtonBehavior+GridLayout+Image>:
+    cols: 2
     rows: 1
-    text: ""
-    source: 'images/sample.png'
+    on_press: pass
     size_hint: (1,None)
     height: '80dp'
-    Button:
-        text_size: root.width, None
-        size: self.texture_size
+    row_default_height: '80dp'
+    row_force_default: True
+    text: ''
+    color: 0,0,0,0
+    opacity: 1 if self.state == 'normal' else 0.5
+    canvas:
+        Color:
+            rgba: 1,0,0,0.8
+        Rectangle:
+            pos: (self.x,self.y)
+            size: (self.width, self.height/2)
+        Rectangle:
+            pos: (self.x+80,self.y+self.height/2)
+            size: (self.width-80, self.height/2)
+        Triangle:
+            points: [self.x, self.y+self.height/2,self.x+80,self.y+self.height/2, self.x+80, self.y+self.height]
+        Color:
+            rgba: 0,0,0,0.9
+        Line:
+            width: 2
+            points: [self.x,self.y+2,self.x+self.width,self.y+2]
+        Line:
+            width: 2
+            points: [self.x+self.width,self.y+2, self.x+self.width, self.y+self.height-2]
+        Line:
+            width: 2
+            points: [self.x+self.width, self.y+self.height-2, self.x+80, self.y+self.height-2]
+        Line:
+            width: 2
+            points: [self.x+80, self.y+self.height-2, self.x, self.y+self.height/2]
+        Line:
+            width: 2
+            points: [self.x, self.y+self.height/2, self.x, self.y+2]
+        Color:
+            rgba: 1,1,1,1
+        Line:
+            width: 30
+            circle: (self.x+35,self.y+self.height/2, 5)
+    canvas.after:
+        Color:
+            rgba: 1,1,1,1
+        Rectangle:
+            texture: self.texture
+            pos: (self.x + 10, self.y+15)
+            size: 50, 50
+    Label:
+        font_size: '35dp'
+        text: self.parent.text
         halign: 'center'
-        text: root.text
-        Image:
-            source: root.source
-            height: root.height - 10
-            y: self.parent.y + self.parent.height - self.height - 5
-            x: self.parent.x + self.parent.width/10
 
 GridLayout:
+    canvas.before:
+        Color:
+            rgba: 1,1,1,0.2
+        Rectangle:
+            pos: self.pos
+            size: self.size
     cols: 1
     rows: 3
     Label:
@@ -35,10 +79,13 @@ GridLayout:
                 text: "Player-Tools"
             ImageButton:
                 text: "Dossier"
+                source: 'images/dossier.png'
             ImageButton:
                 text: "Arsenal"
+                source: 'images/arsenal.png'
             ImageButton:
                 text: "Run Logs"
+                source: 'images/logs.png'
             ImageButton:
                 text: "Settings"
             Label:

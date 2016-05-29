@@ -10,8 +10,5 @@ class SR2GO(App):
     def build(self):
         return Builder.load_file('SR2GO.kv')
 
-    class ImageButton(GridLayout):
-        pass
-
 if __name__ == "__main__":
     SR2GO().run()
