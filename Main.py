@@ -28,7 +28,7 @@ class SR2GO(App):
     def __init__(self):
         super(SR2GO, self).__init__()
         self.nav = None
-        self.dossier = Dossier()
+        self.dossier = Dossier(self)
 
     def build(self):
         Builder.load_file("SR2GO.kv")
@@ -36,17 +36,24 @@ class SR2GO(App):
         self.nav.set_main(Image(source="images/sample.png"), "SR 20 GO")  #Splashscreen
         return self.nav
 
+    def load(self, widget, name):
+        self.nav.set_main(widget,name)
+
     def open_arsenal(self):
-        self.nav.set_main(Label(text="Arsenal"), "Arsenal")
+        self.load(Label(text="Arsenal"), "Arsenal")
+        self.nav.toggle_state()
 
     def open_dossier(self):
-        self.nav.set_main(self.dossier, "Dossier")
+        self.load(self.dossier, "Dossier")
+        self.nav.toggle_state()
 
     def open_npc(self):
-        self.nav.set_main(Label(text="NPC Database"), "NPC Database")
+        self.load(Label(text="NPC Database"), "NPC Database")
+        self.nav.toggle_state()
 
     def open_run(self):
-        self.nav.set_main(Label(text="Run Database"), "Run Database")
+        self.load(Label(text="Run Database"), "Run Database")
+        self.nav.toggle_state()
 
 if __name__ == "__main__":
     SR2GO().run()

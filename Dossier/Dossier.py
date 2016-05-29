@@ -8,21 +8,25 @@ from Dossier.Character import Character
 from Dossier.CharacterView import CharacterView
 
 class DossierButton(Button):
-    pass
+    def __init__(self, text = None, char = None):
+        super(DossierButton, self).__init__()
+        self.Char = char or None
+        self.text = text or "DossierButton"
 
 class Dossier(ScrollView):
-    def __init__(self):
+    def __init__(self, app):
         Builder.load_file("Dossier/Dossier.kv")
         super(Dossier, self).__init__()
+        self.App = app
         self.grid = self.ids.grid
         self.grid.bind(minimum_height=self.grid.setter("height"))
         for i in self.load_chars():
-            btn = DossierButton(text=i.Name)
+            btn = DossierButton(text = i.Name, char = i)
             btn.bind(on_press=self.btn_press)
             self.ids.grid.add_widget(btn)
 
     def btn_press(self, instance):
-        print(instance.text)
+        self.App.load(CharacterView(instance.Char), instance.Char.Name)
 
     def load_chars(self):
         return [Character(str(n)) for n in range(100)]
