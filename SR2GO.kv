@@ -1,17 +1,18 @@
-<ImageButton@ButtonBehavior+GridLayout+Image>:
-    cols: 2
-    rows: 1
-    on_press: pass
-    size_hint: (1,None)
-    height: '80dp'
-    row_default_height: '80dp'
-    row_force_default: True
-    text: ''
-    color: 0,0,0,0
-    opacity: 1 if self.state == 'normal' else 0.5
-    canvas:
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+#: kivy 1.9.1
+#:import NavigationDrawer kivy.garden.navigationdrawer
+#:import Dossier Dossier.Dossier
+
+<MenuButton@ButtonBehavior+Label>:
+    height: "60dp"
+    size_hint_y: None
+    font_size: "15sp"
+    color: [1,1,1,1]
+    opacity: 1 if self.state == "normal" else 0.5
+    canvas.before:
         Color:
-            rgba: 1,0,0,0.8
+            rgba: 1,0,0,1
         Rectangle:
             pos: (self.x,self.y)
             size: (self.width, self.height/2)
@@ -21,84 +22,84 @@
         Triangle:
             points: [self.x, self.y+self.height/2,self.x+80,self.y+self.height/2, self.x+80, self.y+self.height]
         Color:
-            rgba: 0,0,0,0.9
-        Line:
-            width: 2
-            points: [self.x,self.y+2,self.x+self.width,self.y+2]
-        Line:
-            width: 2
-            points: [self.x+self.width,self.y+2, self.x+self.width, self.y+self.height-2]
-        Line:
-            width: 2
-            points: [self.x+self.width, self.y+self.height-2, self.x+80, self.y+self.height-2]
-        Line:
-            width: 2
-            points: [self.x+80, self.y+self.height-2, self.x, self.y+self.height/2]
-        Line:
-            width: 2
-            points: [self.x, self.y+self.height/2, self.x, self.y+2]
-        Color:
             rgba: 1,1,1,1
         Line:
-            width: 30
-            circle: (self.x+35,self.y+self.height/2, 5)
-    canvas.after:
-        Color:
-            rgba: 1,1,1,1
-        Rectangle:
-            texture: self.texture
-            pos: (self.x + 10, self.y+15)
-            size: 50, 50
-    Label:
-        font_size: '35dp'
-        text: self.parent.text
-        halign: 'center'
+            width: 1
+            points: [self.x+1,self.y+1,self.x+self.width-1,self.y+1]
+        Line:
+            width: 1
+            points: [self.x+self.width-1,self.y+1, self.x+self.width-1, self.y+self.height-1]
+        Line:
+            width: 1
+            points: [self.x+self.width-1, self.y+self.height-1, self.x+80-1, self.y+self.height-1]
+        Line:
+            width: 1
+            points: [self.x+80-1, self.y+self.height-1, self.x+1, self.y+self.height/2]
+        Line:
+            width: 1
+            points: [self.x+1, self.y+self.height/2, self.x+1, self.y+1]
 
-GridLayout:
+
+
+<CustomNavigationDrawer>:
     canvas.before:
         Color:
-            rgba: 1,1,1,0.2
+            rgba: 1, 1, 1, 0.2
         Rectangle:
             pos: self.pos
             size: self.size
-    cols: 1
-    rows: 3
-    Label:
-        text: "SR 2 GO"
-        font_size: '50dp'
-        size_hint: (1,0.1)
-    ScrollView:
-        size_hint: (1,0.8)
+    id: nav
+    anim_type: "slide_above_anim"
+    GridLayout:
+        cols: 1
+        rows: 5
+        padding: 10
+        spacing: 10
+        MenuButton:
+            id: btn_arsenal
+            text: "Arsenal"
+            on_press: app.open_arsenal()
+        MenuButton:
+            id: btn_dossier
+            text: "Dossier"
+            on_press: app.open_dossier()
+        MenuButton:
+            id: btn_npc
+            text: "NPC Database"
+            on_press: app.open_npc()
+        MenuButton:
+            id: btn_run
+            text: "Run Database"
+            on_press: app.open_run()
+        Label:
+            text: "Watch your back, shoot straight, conserve ammo, and never, ever, cut a deal with a dragon."
+            text_size: self.size
+            font_size: "25sp"
+            valign: "top"
+            halign: "left"
+            padding: (5, 5)
+    GridLayout:
+        id: main
+        cols: 1
+        rows: 2
+        padding: [0,10,0,0]
         GridLayout:
-            padding: '10dp'
-            size_hint: (1,None)
-            height: self.minimum_height
-            spacing: '10dp'
-            cols: 1
+            cols: 3
+            rows: 1
+            height: "50dp"
+            size_hint_y: None
+            padding: [10,0,10,0]
+            Button:
+                text: "Menu"
+                on_press: nav.toggle_state()
+                width: "50dp"
+                size_hint_x: None
             Label:
-                text: "Player-Tools"
-            ImageButton:
-                text: "Dossier"
-                source: 'images/dossier.png'
-            ImageButton:
-                text: "Arsenal"
-                source: 'images/arsenal.png'
-            ImageButton:
-                text: "Run Logs"
-                source: 'images/logs.png'
-            ImageButton:
-                text: "Settings"
-            Label:
-                text: "GM-Tools"
-            ImageButton:
-                text: "NPC Manager"
-            ImageButton:
-                text: "Run Manager"
-            ImageButton:
-                text: "Player Manager"
-    Label:
-        text_size: root.width, None
-        size: self.texture_size
-        halign: 'center'
-        text: "Watch your back, shoot straight, conserve ammo, and never, ever, cut a deal with a dragon."
-        size_hint: (1,0.1)
+                text: "SR 2 GO"
+                font_size: "30sp"
+                italic: True
+            Button:
+                id: btn_option
+                text: "Option"
+                width: "80dp"
+                size_hint_x: None
