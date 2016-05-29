@@ -5,15 +5,18 @@ class JSONCompatible:
     def to_JSON(self):
         return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=4)
 
+
 class Karma(JSONCompatible):
     def __init__(self, total = None, remaining = None):
         self.Total = 0
         self.Remaining = 0
 
+
 class CurrentDamage(JSONCompatible):
     def __init__(self, physical = None, stun = None):
         self.Physical = physical or 0
         self.Stun = stun or 0
+
 
 class Attribute(JSONCompatible):
     def __init__(self, name = None, natural = None, augmented = None, naturalMax = None):
@@ -22,17 +25,20 @@ class Attribute(JSONCompatible):
         self.Augmented = augmented or 0
         self.NaturalMax = naturalMax or 0
 
+
 class Skill(JSONCompatible):
     def __init__(self):
         self.Name = ""
         self.Rank = 0
         self.LinkedAttribute = ""
 
+
 class Quality(JSONCompatible):
     def __init__(self):
         self.Name = ""
         self.Type = ""  # Positive or Negative
         self.Cost = 0
+
 
 class Contact(JSONCompatible):
     def __init__(self):
@@ -41,10 +47,11 @@ class Contact(JSONCompatible):
         self.Loyality = 0
         self.Description = ""
 
+
 class Character(JSONCompatible):
     """Kapselt einen Character. Die Struktur basiert auf dem Datenformat von Chummer."""
-    def __init__(self):
-        self.Name = ""
+    def __init__(self, name=None):
+        self.Name = name or ""
         self.Metatype = ""
         self.Money = 0
         self.Karma = Karma(total = 0, remaining = 0)
@@ -67,5 +74,6 @@ class Character(JSONCompatible):
         self.Qualities = []
         self.Contacts = []
 
-c = Character()
-print(c.to_JSON())
+
+if __name__ == "__main__":
+    print("Run Main.py !")

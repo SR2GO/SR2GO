@@ -82,19 +82,19 @@
         id: main
         cols: 1
         rows: 2
-        padding: [0,10,0,0]
+        padding: [10,10,10,10]
         GridLayout:
             cols: 3
             rows: 1
             height: "50dp"
             size_hint_y: None
-            padding: [10,0,10,0]
             Button:
                 text: "Menu"
                 on_press: nav.toggle_state()
                 width: "50dp"
                 size_hint_x: None
             Label:
+                id: title
                 text: "SR 2 GO"
                 font_size: "30sp"
                 italic: True

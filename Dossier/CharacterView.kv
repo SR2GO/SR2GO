@@ -2,18 +2,18 @@
 # -*- coding: utf-8 -*-
 #: kivy 1.9.1
 
-<DossierButton>:
+<CharacterLabel>:
     size_hint_y: None
     height: "40dp"
-    text: "DossierButton"
+    text: "Character"
     canvas.before:
         Color:
-            rgba: 1, 1, 1, 0.1
+            rgba: 1, 0, 0, 0.1
         Rectangle:
             pos: self.pos
             size: self.size
 
-<Dossier>:
+<CharacterView>:
     GridLayout:
         id: grid
         cols: 1
