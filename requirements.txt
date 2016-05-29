@@ -1,0 +1,12 @@
+kivy
+kivy-garden
+pygments
+docutils
+kivy.deps.glew
+kivy.geps.gstreamer
+kivy.deps.sdl2
+pip
+pypiwin32
+requests
+setuptools
+wheel
