@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Shadowrun xmlns="http://www.stauer-online.de/sr/characters.xsd">
+  <Character>
+    <Name>Desmond</Name>
+    <Story>
+</Story>
+    <Metatype>Norm</Metatype>
+    <Money>3279</Money>
+    <TotalKarma>2</TotalKarma>
+    <RemainingKarma>2</RemainingKarma>
+    <Awakened>Magician</Awakened>
+    <Magic>6</Magic>
+    <Essence>6</Essence>
+    <Edge>3</Edge>
+    <Passes>1</Passes>
+    <CurrentPhysicalDamage>0</CurrentPhysicalDamage>
+    <CurrentStunDamage>0</CurrentStunDamage>
+    <Attributes>
+      <Attribute type="Body">
+        <naturalValue>3</naturalValue>
+        <augmentedValue>3</augmentedValue>
+        <naturalMaximum>6</naturalMaximum>
+      </Attribute>
+      <Attribute type="Agility">
+        <naturalValue>3</naturalValue>
+        <augmentedValue>3</augmentedValue>
+        <naturalMaximum>6</naturalMaximum>
+      </Attribute>
+      <Attribute type="Reaction">
+        <naturalValue>2</naturalValue>
+        <augmentedValue>2</augmentedValue>
+        <naturalMaximum>6</naturalMaximum>
+      </Attribute>
+      <Attribute type="Strength">
+        <naturalValue>3</naturalValue>
+        <augmentedValue>3</augmentedValue>
+        <naturalMaximum>6</naturalMaximum>
+      </Attribute>
+      <Attribute type="Charisma">
+        <naturalValue>3</naturalValue>
+        <augmentedValue>3</augmentedValue>
+        <naturalMaximum>6</naturalMaximum>
+      </Attribute>
+      <Attribute type="Intuition">
+        <naturalValue>3</naturalValue>
+        <augmentedValue>3</augmentedValue>
+        <naturalMaximum>6</naturalMaximum>
+      </Attribute>
+      <Attribute type="Logic">
+        <naturalValue>5</naturalValue>
+        <augmentedValue>5</augmentedValue>
+        <naturalMaximum>6</naturalMaximum>
+      </Attribute>
+      <Attribute type="Willpower">
+        <naturalValue>6</naturalValue>
+        <augmentedValue>6</augmentedValue>
+        <naturalMaximum>6</naturalMaximum>
+      </Attribute>
+    </Attributes>
+    <Skills>
+      <Skill name="Askennen">
+        <Rank>6</Rank>
+        <LinkedAttribute>Intuition</LinkedAttribute>
+      </Skill>
+      <Skill name="Computer">
+        <Rank>2</Rank>
+        <LinkedAttribute>Logic</LinkedAttribute>
+      </Skill>
+      <Skill name="Einschüchtern">
+        <Rank>6</Rank>
+        <LinkedAttribute>Charisma</LinkedAttribute>
+      </Skill>
+      <Skill name="Gebräuche">
+        <Rank>3</Rank>
+        <LinkedAttribute>Charisma</LinkedAttribute>
+      </Skill>
+      <Skill name="Herbeirufen">
+        <Rank>6</Rank>
+        <LinkedAttribute>Magic</LinkedAttribute>
+      </Skill>
+      <Skill name="Ritualzauberei">
+        <Rank>6</Rank>
+        <LinkedAttribute>Magic</LinkedAttribute>
+      </Skill>
+      <Skill name="Spruchzauberei">
+        <Rank>6</Rank>
+        <LinkedAttribute>Magic</LinkedAttribute>
+      </Skill>
+      <Skill name="Wahrnehmung">
+        <Rank>3</Rank>
+        <LinkedAttribute>Intuition</LinkedAttribute>
+      </Skill>
+    </Skills>
+    <Qualities>
+      <Quality name="Zauberer" type="positive" costs="0" />
+      <Quality name="Schutzgeist" type="positive" specialization="Donnervogel" costs="5" />
+      <Quality name="Erhöhte Konzentrationsfähigkeit (Stufe 4)" type="positive" costs="16" />
+      <Quality name="Sozialstress" type="negative" costs="8" />
+    </Qualities>
+    <Contacts>
+      <Contact name="Achmed" connection="3" loyalty="4">
+        <Type>Connection</Type>
+        <Description></Description>
+      </Contact>
+      <Contact name="Maik" connection="1" loyalty="1">
+        <Type>Connection</Type>
+        <Description></Description>
+      </Contact>
+    </Contacts>
+    <Armors>
+      <Armor Name="Bikerpanzerung" active="true">
+        <Ballistic></Ballistic>
+        <Impact></Impact>
+      </Armor>
+      <Armor Name="Bikerhelm" active="true">
+        <Ballistic></Ballistic>
+        <Impact></Impact>
+      </Armor>
+    </Armors>
+  </Character>
+</Shadowrun>
