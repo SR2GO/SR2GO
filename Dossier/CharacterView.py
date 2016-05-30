@@ -11,9 +11,9 @@ class CharacterViewLabel(Label):
 
 class CharacterView(ScrollView):
     """Provides the UI to a Character"""
-    def __init__(self, character):
+    def __init__(self, character, **kwargs):
         Builder.load_file("Dossier/CharacterView.kv")
-        super(CharacterView, self).__init__()
+        super(CharacterView, self).__init__(**kwargs)
         self.character = character
         self.grid = self.ids.grid
         self.grid.bind(minimum_height=self.grid.setter("height"))

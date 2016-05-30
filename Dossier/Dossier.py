@@ -26,7 +26,9 @@ class Dossier(ScrollView):
             self.ids.grid.add_widget(btn)
 
     def btn_press(self, instance):
-        self.App.load(CharacterView(instance.Char), instance.Char.Name)
+        char = instance.Char
+        cv = CharacterView(char)
+        self.App.load(cv, char.Name)
 
     def load_chars(self):
         return [Character(str(n)) for n in range(100)]
