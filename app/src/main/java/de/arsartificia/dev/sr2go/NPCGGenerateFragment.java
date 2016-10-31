@@ -1,5 +1,6 @@
 package de.arsartificia.dev.sr2go;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -10,6 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 public class NPCGGenerateFragment extends Fragment {
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
     @Nullable
     @Override
