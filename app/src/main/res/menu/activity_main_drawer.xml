@@ -6,12 +6,15 @@
             <group android:checkableBehavior="single">
                 <item
                     android:id="@+id/nav_npcggenerate"
+                    android:icon="@drawable/ic_npcg_generate"
                     android:title="Generate" />
                 <item
                     android:id="@+id/nav_npcgfavorite"
+                    android:icon="@drawable/ic_npcg_fav"
                     android:title="Favorites" />
                 <item
                     android:id="@+id/nav_npcgstats"
+                    android:icon="@drawable/ic_npcg_stats"
                     android:title="Stats" />
             </group>
         </menu>
@@ -23,10 +26,6 @@
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
                 android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
         </menu>
     </item>
 
