@@ -26,13 +26,15 @@ public class MainActivity extends AppCompatActivity
     private SensorManager mSensorManager;
     private Sensor mAccelerometer;
     private ShakeDetector mShakeDetector;
+    private Fragment mCurrentFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        switchFragment(new MainFragment());
+        mCurrentFragment = new MainFragment();
+        switchFragment();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -46,7 +48,10 @@ public class MainActivity extends AppCompatActivity
         mShakeDetector.setOnShakeListener(new ShakeDetector.OnShakeListener() {
             @Override
             public void onShake(int count) {
-                Toast.makeText(getApplicationContext(), "shake", Toast.LENGTH_SHORT);
+                if (mCurrentFragment instanceof NPCGGenerateFragment) {
+                    NPCGGenerateFragment fragment = (NPCGGenerateFragment) mCurrentFragment;
+                    fragment.onShake();
+                }
             }
         });
 
@@ -104,9 +109,9 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    private void switchFragment(Fragment fragment) {
+    private void switchFragment() {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_container, fragment);
+        fragmentTransaction.replace(R.id.fragment_container, mCurrentFragment);
         fragmentTransaction.commit();
     }
 
@@ -117,12 +122,13 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_npcggenerate) {
-            switchFragment(new NPCGGenerateFragment());
+            mCurrentFragment = new NPCGGenerateFragment();
         } else if (id == R.id.nav_npcgfavorite) {
-
+            mCurrentFragment = new MainFragment();
         } else if (id == R.id.nav_npcgstats) {
-
+            mCurrentFragment = new MainFragment();
         }
+        switchFragment();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

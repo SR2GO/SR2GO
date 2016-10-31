@@ -9,8 +9,16 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 public class NPCGGenerateFragment extends Fragment {
+
+    private Button mButtonName;
+    private Button mButtonGender;
+    private Button mButtonAge;
+    private Button mButtonMetatype;
+    private Button mButtonFeatures;
+    private Button mButtonSpecial;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,12 +34,63 @@ public class NPCGGenerateFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        FloatingActionButton fab = (FloatingActionButton) getView().findViewById(R.id.fab_fav);
+        View view = getView();
+        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab_fav);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "IMPLEMENT THIS !", Snackbar.LENGTH_SHORT).setAction("Action", null).show();
             }
         });
+        mButtonName = (Button) view.findViewById(R.id.button_name);
+        mButtonGender = (Button) view.findViewById(R.id.button_gender);
+        mButtonAge = (Button) view.findViewById(R.id.button_age);
+        mButtonMetatype = (Button) view.findViewById(R.id.button_metatype);
+        mButtonFeatures = (Button) view.findViewById(R.id.button_features);
+        mButtonSpecial = (Button) view.findViewById(R.id.button_special);
+
+    }
+
+    private void randomizeName() {
+        String value = "Test";
+        mButtonName.setText(value);
+    }
+
+    private void randomizeGender() {
+        String value = "Test";
+        mButtonGender.setText(value);
+    }
+
+    private void randomizeAge() {
+        String value = "Test";
+        mButtonAge.setText(value);
+    }
+
+    private void randomizeMetatype() {
+        String value = "Test";
+        mButtonMetatype.setText(value);
+    }
+
+    private void randomizeFeatures() {
+        String value = "Test";
+        mButtonFeatures.setText(value);
+    }
+
+    private void randomizeSpecial() {
+        String value = "Test";
+        mButtonSpecial.setText(value);
+    }
+
+    private void randomizeAll() {
+        randomizeName();
+        randomizeGender();
+        randomizeAge();
+        randomizeMetatype();
+        randomizeFeatures();
+        randomizeSpecial();
+    }
+
+    public void onShake() {
+        randomizeAll();
     }
 }
