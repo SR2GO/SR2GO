@@ -20,6 +20,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -27,6 +38,7 @@ public class MainActivity extends AppCompatActivity
     private Sensor mAccelerometer;
     private ShakeDetector mShakeDetector;
     private Fragment mCurrentFragment;
+    public HashSet<Character> mCharacters;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +75,32 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        mCharacters = new HashSet<>();
+
+        loadCharacters();
+    }
+
+    protected void loadCharacters() {
+        //// TODO: 12/1/16 Replace hardcoded 100 by intelligent value (based on settings/ mobile etc)
+        mCharacters = Character.loadLocal(this);
+        mCharacters.addAll(Character.loadRemote(this, 100));
+    }
+
+    protected void cacheCharacters() {
+        for (Character c : mCharacters) {
+            try {
+                File file = new File(getCacheDir(), String.valueOf(c.hashCode()));
+                FileWriter fileWriter = new FileWriter(file.getAbsoluteFile());
+                BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+                bufferedWriter.write(c.toJSON());
+                bufferedWriter.close();
+                fileWriter.close();
+            }
+            catch (Exception e) {
+                //// TODO: 12/1/16 should probably do something here ...
+            }
+        }
     }
 
     @Override
@@ -74,6 +112,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onPause() {
         mSensorManager.unregisterListener(mShakeDetector);
+        cacheCharacters();
         super.onPause();
     }
 
