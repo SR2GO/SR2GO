@@ -11,70 +11,81 @@ import org.springframework.web.client.RestTemplate;
 
 
 public class Character {
-    private String FirstName;
-    private String LastName;
-    private String NickName;
+    private int id;
+    private String firstname;
+    private String lastname;
+    private String nickname;
 
-    private int Age;
-    private String Gender;
-    private Visuals Visuals;
-    private Personal Personal;
+    private int age;
+    private String gender;
+    private Visuals visuals;
+    private Personal personal;
 
     //region Getter / Setter
-    public String getFirstName() {
-        return FirstName;
+
+
+    public int getId() {
+        return id;
     }
 
-    public void setFirstName(String firstName) {
-        FirstName = firstName;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getLastName() {
-        return LastName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setLastName(String lastName) {
-        LastName = lastName;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public String getNickName() {
-        return NickName;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setNickName(String nickName) {
-        NickName = nickName;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 
     public int getAge() {
-        return Age;
+        return age;
     }
 
     public void setAge(int age) {
-        Age = age;
+        this.age = age;
     }
 
     public String getGender() {
-        return Gender;
+        return gender;
     }
 
     public void setGender(String gender) {
-        Gender = gender;
+        this.gender = gender;
     }
 
     public de.arsartificia.dev.sr2go.Visuals getVisuals() {
-        return Visuals;
+        return visuals;
     }
 
     public void setVisuals(de.arsartificia.dev.sr2go.Visuals visuals) {
-        Visuals = visuals;
+        this.visuals = visuals;
     }
 
     public de.arsartificia.dev.sr2go.Personal getPersonal() {
-        return Personal;
+        return personal;
     }
 
     public void setPersonal(de.arsartificia.dev.sr2go.Personal personal) {
-        Personal = personal;
+        this.personal = personal;
     }
     //endregion
 
@@ -127,7 +138,7 @@ public class Character {
         @Override
         protected Character doInBackground(Void... voids) {
             try {
-                final String url = "url here";
+                final String url = "http://192.168.1.105:8080/npc";
                 RestTemplate restTemplate = new RestTemplate();
                 restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
                 Character character = restTemplate.getForObject(url, Character.class);
@@ -143,6 +154,7 @@ public class Character {
         protected void onPostExecute(Character character) {
             super.onPostExecute(character);
             context.mCharacters.add(character);
+            Log.i("MainActivity", character.toJSON());
         }
     }
 }
