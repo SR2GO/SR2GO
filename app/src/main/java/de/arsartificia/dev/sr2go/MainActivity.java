@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity
     private Sensor mAccelerometer;
     private ShakeDetector mShakeDetector;
     private Fragment mCurrentFragment;
+    public String mServerAddress = "localhost";
     public HashSet<Character> mCharacters;
 
     @Override
@@ -84,7 +85,9 @@ public class MainActivity extends AppCompatActivity
     protected void loadCharacters() {
         //// TODO: 12/1/16 Replace hardcoded 100 by intelligent value (based on settings/ mobile etc)
         mCharacters = Character.loadLocal(this);
-        mCharacters.addAll(Character.loadRemote(this, 100));
+        if (Util.isOnline(mServerAddress)) {
+            mCharacters.addAll(Character.loadRemote(this, 100));
+        }
     }
 
     protected void cacheCharacters() {

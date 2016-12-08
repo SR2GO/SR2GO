@@ -121,6 +121,7 @@ public class Character {
     }
 
     public static HashSet<Character> loadRemote(MainActivity context, int amount) {
+
         HashSet<Character> characters = new HashSet<>(amount);
         for (int i = 0; i < amount; ++i) {
             new HttpRequestTask(context).execute();
@@ -137,12 +138,12 @@ public class Character {
 
         @Override
         protected Character doInBackground(Void... voids) {
+
             try {
-                final String url = "http://192.168.1.105:8080/npc";
+                final String url = context.mServerAddress;
                 RestTemplate restTemplate = new RestTemplate();
                 restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
-                Character character = restTemplate.getForObject(url, Character.class);
-                return character;
+                return restTemplate.getForObject(url, Character.class);
             } catch (Exception e) {
                 Log.e("MainActivity", e.getMessage(), e);
             }
@@ -153,8 +154,10 @@ public class Character {
         @Override
         protected void onPostExecute(Character character) {
             super.onPostExecute(character);
-            context.mCharacters.add(character);
-            Log.i("MainActivity", character.toJSON());
+            if (character != null) {
+                context.mCharacters.add(character);
+                Log.i("MainActivity", character.toJSON());
+            }
         }
     }
 }
