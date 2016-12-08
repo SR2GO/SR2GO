@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+         <!-- XML Schema Generated from XML Document on Wed Dec 07 2016 22:20:55 GMT+0100 (Mitteleuropäische Zeit) -->
+         <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+         <xs:element name="character">
+               <xs:complexType>
+                     <xs:sequence>
+                           <xs:element name="createdversion" type="xs:string"></xs:element>
+                           <xs:element name="appversion" type="xs:string"></xs:element>
+                           <xs:element name="gameedition" type="xs:string"></xs:element>
+                           <xs:element name="settings" type="xs:string"></xs:element>
+                           <xs:element name="metatype" type="xs:string"></xs:element>
+                           <xs:element name="metatypebp" type="xs:int"></xs:element>
+                           <xs:element name="metavariant"></xs:element>
+                           <xs:element name="metatypecategory" type="xs:string"></xs:element>
+                           <xs:element name="metageneticlimit" type="xs:int"></xs:element>
+                           <xs:element name="movement"></xs:element>
+                           <xs:element name="walk" type="xs:string"></xs:element>
+                           <xs:element name="run" type="xs:string"></xs:element>
+                           <xs:element name="sprint" type="xs:string"></xs:element>
+                           <xs:element name="mutantcritterbaseskills" type="xs:int"></xs:element>
+                           <xs:element name="prioritymetatype"></xs:element>
+                           <xs:element name="priorityattributes"></xs:element>
+                           <xs:element name="priorityspecial"></xs:element>
+                           <xs:element name="priorityskills"></xs:element>
+                           <xs:element name="priorityresources"></xs:element>
+                           <xs:element name="prioritytalent"></xs:element>
+                           <xs:element name="priorityskill1"></xs:element>
+                           <xs:element name="priorityskill2"></xs:element>
+                           <xs:element name="priorityskillgroup"></xs:element>
+                           <xs:element name="essenceatspecialstart" type="xs:int"></xs:element>
+                           <xs:element name="name" type="xs:string"></xs:element>
+                           <xs:element name="mugshot"></xs:element>
+                           <xs:element name="sex" type="xs:string"></xs:element>
+                           <xs:element name="age" type="xs:int"></xs:element>
+                           <xs:element name="eyes" type="xs:string"></xs:element>
+                           <xs:element name="height" type="xs:string"></xs:element>
+                           <xs:element name="weight" type="xs:string"></xs:element>
+                           <xs:element name="skin" type="xs:string"></xs:element>
+                           <xs:element name="hair" type="xs:string"></xs:element>
+                           <xs:element name="description" type="xs:string"></xs:element>
+                           <xs:element name="background" type="xs:string"></xs:element>
+                           <xs:element name="concept"></xs:element>
+                           <xs:element name="notes" type="xs:string"></xs:element>
+                           <xs:element name="alias" type="xs:string"></xs:element>
+                           <xs:element name="playername" type="xs:string"></xs:element>
+                           <xs:element name="gamenotes" type="xs:string"></xs:element>
+                           <xs:element name="primaryarm" type="xs:string"></xs:element>
+                           <xs:element name="ignorerules" type="xs:string"></xs:element>
+                           <xs:element name="karma" type="xs:int"></xs:element>
+                           <xs:element name="totalkarma" type="xs:int"></xs:element>
+                           <xs:element name="special" type="xs:int"></xs:element>
+                           <xs:element name="totalspecial" type="xs:int"></xs:element>
+                           <xs:element name="totalattributes" type="xs:int"></xs:element>
+                           <xs:element name="contactpoints" type="xs:int"></xs:element>
+                           <xs:element name="contactpointsused" type="xs:int"></xs:element>
+                           <xs:element name="spelllimit" type="xs:int"></xs:element>
+                           <xs:element name="cfplimit" type="xs:int"></xs:element>
+                           <xs:element name="streetcred" type="xs:int"></xs:element>
+                           <xs:element name="notoriety" type="xs:int"></xs:element>
+                           <xs:element name="publicawareness" type="xs:int"></xs:element>
+                           <xs:element name="burntstreetcred" type="xs:int"></xs:element>
+                           <xs:element name="created" type="xs:string"></xs:element>
+                           <xs:element name="maxavail" type="xs:int"></xs:element>
+                           <xs:element name="nuyen" type="xs:int"></xs:element>
+                           <xs:element name="startingnuyen" type="xs:int"></xs:element>
+                           <xs:element name="adeptwaydiscount" type="xs:int"></xs:element>
+                           <xs:element name="sumtoten" type="xs:int"></xs:element>
+                           <xs:element name="bp" type="xs:int"></xs:element>
+                           <xs:element name="buildkarma" type="xs:int"></xs:element>
+                           <xs:element name="buildmethod" type="xs:string"></xs:element>
+                           <xs:element name="gameplayoption" type="xs:string"></xs:element>
+                           <xs:element name="gameplayoptionqualitylimit" type="xs:int"></xs:element>
+                           <xs:element name="maxnuyen" type="xs:int"></xs:element>
+                           <xs:element name="maxkarma" type="xs:int"></xs:element>
+                           <xs:element name="contactmultiplier" type="xs:int"></xs:element>
+                           <xs:element name="nuyenbp" type="xs:int"></xs:element>
+                           <xs:element name="nuyenmaxbp" type="xs:int"></xs:element>
+                           <xs:element name="adept" type="xs:string"></xs:element>
+                           <xs:element name="magician" type="xs:string"></xs:element>
+                           <xs:element name="technomancer" type="xs:string"></xs:element>
+                           <xs:element name="initiationoverride" type="xs:string"></xs:element>
+                           <xs:element name="critter" type="xs:string"></xs:element>
+                           <xs:element name="friendsinhighplaces" type="xs:string"></xs:element>
+                           <xs:element name="prototypetranshuman" type="xs:int"></xs:element>
+                           <xs:element name="blackmarketdiscount" type="xs:string"></xs:element>
+                           <xs:element name="excon" type="xs:string"></xs:element>
+                           <xs:element name="trustfund" type="xs:int"></xs:element>
+                           <xs:element name="restrictedgear" type="xs:string"></xs:element>
+                           <xs:element name="overclocker" type="xs:string"></xs:element>
+                           <xs:element name="mademan" type="xs:string"></xs:element>
+                           <xs:element name="lightningreflexes" type="xs:string"></xs:element>
+                           <xs:element name="fame" type="xs:string"></xs:element>
+                           <xs:element name="bornrich" type="xs:string"></xs:element>
+                           <xs:element name="erased" type="xs:string"></xs:element>
+                           <xs:element name="attributes">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="attribute" maxOccurs="unbounded">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="name" type="xs:string"></xs:element>
+                                                               <xs:element name="metatypemin" type="xs:int"></xs:element>
+                                                               <xs:element name="metatypemax" type="xs:int"></xs:element>
+                                                               <xs:element name="metatypeaugmax" type="xs:int"></xs:element>
+                                                               <xs:element name="value" type="xs:int"></xs:element>
+                                                               <xs:element name="base" type="xs:int"></xs:element>
+                                                               <xs:element name="karma" type="xs:int"></xs:element>
+                                                               <xs:element name="augmodifier" type="xs:int"></xs:element>
+                                                               <xs:element name="totalvalue" type="xs:int"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="magenabled" type="xs:string"></xs:element>
+                           <xs:element name="initiategrade" type="xs:int"></xs:element>
+                           <xs:element name="resenabled" type="xs:string"></xs:element>
+                           <xs:element name="submersiongrade" type="xs:int"></xs:element>
+                           <xs:element name="groupmember" type="xs:string"></xs:element>
+                           <xs:element name="groupname"></xs:element>
+                           <xs:element name="groupnotes"></xs:element>
+                           <xs:element name="totaless" type="xs:string"></xs:element>
+                           <xs:element name="tradition"></xs:element>
+                           <xs:element name="traditiondrain"></xs:element>
+                           <xs:element name="traditionname"></xs:element>
+                           <xs:element name="spiritcombat"></xs:element>
+                           <xs:element name="spiritdetection"></xs:element>
+                           <xs:element name="spirithealth"></xs:element>
+                           <xs:element name="spiritillusion"></xs:element>
+                           <xs:element name="spiritmanipulation"></xs:element>
+                           <xs:element name="stream" type="xs:string"></xs:element>
+                           <xs:element name="physicalcmfilled" type="xs:int"></xs:element>
+                           <xs:element name="stuncmfilled" type="xs:int"></xs:element>
+                           <xs:element name="newskills">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="skillptsmax" type="xs:int"></xs:element>
+                                             <xs:element name="skillgrpsmax" type="xs:int"></xs:element>
+                                             <xs:element name="uneducated" type="xs:string"></xs:element>
+                                             <xs:element name="uncouth" type="xs:string"></xs:element>
+                                             <xs:element name="schoolofhardknocks" type="xs:string"></xs:element>
+                                             <xs:element name="collegeeducation" type="xs:string"></xs:element>
+                                             <xs:element name="jackofalltrades" type="xs:string"></xs:element>
+                                             <xs:element name="techschool" type="xs:string"></xs:element>
+                                             <xs:element name="linguist" type="xs:string"></xs:element>
+                                             <xs:element name="skills">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="skill" maxOccurs="unbounded">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="guid" type="xs:string"></xs:element>
+                                                                                 <xs:element name="suid" type="xs:string"></xs:element>
+                                                                                 <xs:element name="karma" type="xs:int"></xs:element>
+                                                                                 <xs:element name="base" type="xs:int"></xs:element>
+                                                                                 <xs:element name="notes"></xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="knoskills">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="skill" maxOccurs="unbounded">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="guid" type="xs:string"></xs:element>
+                                                                                 <xs:element name="suid" type="xs:string"></xs:element>
+                                                                                 <xs:element name="karma" type="xs:int"></xs:element>
+                                                                                 <xs:element name="base" type="xs:int"></xs:element>
+                                                                                 <xs:element name="notes"></xs:element>
+                                                                                 <xs:element name="name" type="xs:string"></xs:element>
+                                                                                 <xs:element name="type" type="xs:string"></xs:element>
+                                                                                 <xs:element name="de" type="xs:string"></xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="skilljackknowledgeskills"></xs:element>
+                                             <xs:element name="groups">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="group" maxOccurs="unbounded">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="karma" type="xs:int"></xs:element>
+                                                                                 <xs:element name="base" type="xs:int"></xs:element>
+                                                                                 <xs:element name="id" type="xs:string"></xs:element>
+                                                                                 <xs:element name="name" type="xs:string"></xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="skillgroups">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="skillgroup" maxOccurs="unbounded">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="name" type="xs:string"></xs:element>
+                                                               <xs:element name="rating" type="xs:int"></xs:element>
+                                                               <xs:element name="base" type="xs:int"></xs:element>
+                                                               <xs:element name="karma" type="xs:int"></xs:element>
+                                                               <xs:element name="freelevels" type="xs:int"></xs:element>
+                                                               <xs:element name="ratingmax" type="xs:int"></xs:element>
+                                                               <xs:element name="broken" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="skills">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="skill" maxOccurs="unbounded">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="id" type="xs:string"></xs:element>
+                                                               <xs:element name="name" type="xs:string"></xs:element>
+                                                               <xs:element name="skillgroup" type="xs:string"></xs:element>
+                                                               <xs:element name="skillcategory" type="xs:string"></xs:element>
+                                                               <xs:element name="grouped" type="xs:string"></xs:element>
+                                                               <xs:element name="default" type="xs:string"></xs:element>
+                                                               <xs:element name="rating" type="xs:int"></xs:element>
+                                                               <xs:element name="base" type="xs:int"></xs:element>
+                                                               <xs:element name="karma" type="xs:int"></xs:element>
+                                                               <xs:element name="freelevels" type="xs:int"></xs:element>
+                                                               <xs:element name="ratingmax" type="xs:int"></xs:element>
+                                                               <xs:element name="knowledge" type="xs:string"></xs:element>
+                                                               <xs:element name="exotic" type="xs:string"></xs:element>
+                                                               <xs:element name="spec"></xs:element>
+                                                               <xs:element name="allowdelete" type="xs:string"></xs:element>
+                                                               <xs:element name="buywithkarma" type="xs:string"></xs:element>
+                                                               <xs:element name="attribute" type="xs:string"></xs:element>
+                                                               <xs:element name="source" type="xs:string"></xs:element>
+                                                               <xs:element name="page" type="xs:int"></xs:element>
+                                                               <xs:element name="skillspecializations"></xs:element>
+                                                               <xs:element name="totalvalue" type="xs:int"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="contacts">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="contact" maxOccurs="unbounded">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="name" type="xs:string"></xs:element>
+                                                               <xs:element name="role" type="xs:string"></xs:element>
+                                                               <xs:element name="location" type="xs:string"></xs:element>
+                                                               <xs:element name="connection" type="xs:int"></xs:element>
+                                                               <xs:element name="loyalty" type="xs:int"></xs:element>
+                                                               <xs:element name="type" type="xs:string"></xs:element>
+                                                               <xs:element name="file"></xs:element>
+                                                               <xs:element name="relative"></xs:element>
+                                                               <xs:element name="notes"></xs:element>
+                                                               <xs:element name="groupname"></xs:element>
+                                                               <xs:element name="colour" type="xs:int"></xs:element>
+                                                               <xs:element name="free" type="xs:string"></xs:element>
+                                                               <xs:element name="group" type="xs:string"></xs:element>
+                                                               <xs:element name="mademan" type="xs:string"></xs:element>
+                                                               <xs:element name="family" type="xs:string"></xs:element>
+                                                               <xs:element name="blackmail" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="spells"></xs:element>
+                           <xs:element name="foci"></xs:element>
+                           <xs:element name="stackedfoci"></xs:element>
+                           <xs:element name="powers"></xs:element>
+                           <xs:element name="spirits"></xs:element>
+                           <xs:element name="complexforms"></xs:element>
+                           <xs:element name="martialarts"></xs:element>
+                           <xs:element name="martialartmaneuvers"></xs:element>
+                           <xs:element name="limitmodifiers"></xs:element>
+                           <xs:element name="armors">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="armor">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="guid" type="xs:string"></xs:element>
+                                                               <xs:element name="name" type="xs:string"></xs:element>
+                                                               <xs:element name="category" type="xs:string"></xs:element>
+                                                               <xs:element name="armor" type="xs:int"></xs:element>
+                                                               <xs:element name="armoroverride" type="xs:int"></xs:element>
+                                                               <xs:element name="armorcapacity" type="xs:int"></xs:element>
+                                                               <xs:element name="avail" type="xs:int"></xs:element>
+                                                               <xs:element name="cost" type="xs:int"></xs:element>
+                                                               <xs:element name="source" type="xs:string"></xs:element>
+                                                               <xs:element name="page" type="xs:int"></xs:element>
+                                                               <xs:element name="armorname"></xs:element>
+                                                               <xs:element name="equipped" type="xs:string"></xs:element>
+                                                               <xs:element name="extra"></xs:element>
+                                                               <xs:element name="damage" type="xs:int"></xs:element>
+                                                               <xs:element name="rating" maxOccurs="unbounded" type="xs:int"></xs:element>
+                                                               <xs:element name="armormods"></xs:element>
+                                                               <xs:element name="bonus"></xs:element>
+                                                               <xs:element name="location"></xs:element>
+                                                               <xs:element name="notes"></xs:element>
+                                                               <xs:element name="discountedcost" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="weapons">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="weapon" maxOccurs="unbounded">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="guid" type="xs:string"></xs:element>
+                                                               <xs:element name="name" type="xs:string"></xs:element>
+                                                               <xs:element name="category" type="xs:string"></xs:element>
+                                                               <xs:element name="type" type="xs:string"></xs:element>
+                                                               <xs:element name="spec"></xs:element>
+                                                               <xs:element name="spec2"></xs:element>
+                                                               <xs:element name="reach" type="xs:int"></xs:element>
+                                                               <xs:element name="damage" type="xs:string"></xs:element>
+                                                               <xs:element name="ap" type="xs:string"></xs:element>
+                                                               <xs:element name="mode" type="xs:int"></xs:element>
+                                                               <xs:element name="rc" type="xs:int"></xs:element>
+                                                               <xs:element name="ammo" type="xs:int"></xs:element>
+                                                               <xs:element name="cyberware" type="xs:string"></xs:element>
+                                                               <xs:element name="ammocategory"></xs:element>
+                                                               <xs:element name="clips"></xs:element>
+                                                               <xs:element name="conceal" type="xs:int"></xs:element>
+                                                               <xs:element name="avail" type="xs:int"></xs:element>
+                                                               <xs:element name="cost" type="xs:int"></xs:element>
+                                                               <xs:element name="useskill"></xs:element>
+                                                               <xs:element name="range"></xs:element>
+                                                               <xs:element name="rangemultiply" type="xs:int"></xs:element>
+                                                               <xs:element name="fullburst" type="xs:int"></xs:element>
+                                                               <xs:element name="suppressive" type="xs:int"></xs:element>
+                                                               <xs:element name="source" type="xs:string"></xs:element>
+                                                               <xs:element name="page" type="xs:int"></xs:element>
+                                                               <xs:element name="weaponname"></xs:element>
+                                                               <xs:element name="included" type="xs:string"></xs:element>
+                                                               <xs:element name="installed" type="xs:string"></xs:element>
+                                                               <xs:element name="requireammo" type="xs:string"></xs:element>
+                                                               <xs:element name="accuracy" type="xs:string"></xs:element>
+                                                               <xs:element name="location"></xs:element>
+                                                               <xs:element name="notes"></xs:element>
+                                                               <xs:element name="discountedcost" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="cyberwares">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="cyberware" maxOccurs="unbounded">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="sourceid" type="xs:string"></xs:element>
+                                                               <xs:element name="guid" type="xs:string"></xs:element>
+                                                               <xs:element name="name" type="xs:string"></xs:element>
+                                                               <xs:element name="category" type="xs:string"></xs:element>
+                                                               <xs:element name="limbslot"></xs:element>
+                                                               <xs:element name="ess" type="xs:string"></xs:element>
+                                                               <xs:element name="capacity" type="xs:string"></xs:element>
+                                                               <xs:element name="avail" type="xs:string"></xs:element>
+                                                               <xs:element name="cost" type="xs:string"></xs:element>
+                                                               <xs:element name="source" type="xs:string"></xs:element>
+                                                               <xs:element name="page" type="xs:int"></xs:element>
+                                                               <xs:element name="rating" type="xs:int"></xs:element>
+                                                               <xs:element name="minrating" type="xs:int"></xs:element>
+                                                               <xs:element name="maxrating" type="xs:int"></xs:element>
+                                                               <xs:element name="subsystems" type="xs:string"></xs:element>
+                                                               <xs:element name="grade" type="xs:string"></xs:element>
+                                                               <xs:element name="location"></xs:element>
+                                                               <xs:element name="suite" type="xs:string"></xs:element>
+                                                               <xs:element name="essdiscount" type="xs:int"></xs:element>
+                                                               <xs:element name="forcegrade"></xs:element>
+                                                               <xs:element name="matrixcmfilled" type="xs:int"></xs:element>
+                                                               <xs:element name="vehiclemounted" type="xs:string"></xs:element>
+                                                               <xs:element name="bonus"></xs:element>
+                                                               <xs:element name="improvementsource" type="xs:string"></xs:element>
+                                                               <xs:element name="children">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="cyberware" maxOccurs="unbounded">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="sourceid" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="guid" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="name" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="category" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="limbslot"></xs:element>
+                                                                                                   <xs:element name="ess" type="xs:double"></xs:element>
+                                                                                                   <xs:element name="capacity" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="avail" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="cost" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="source" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="page" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="rating" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="minrating" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="maxrating" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="subsystems"></xs:element>
+                                                                                                   <xs:element name="grade" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="location"></xs:element>
+                                                                                                   <xs:element name="suite" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="essdiscount" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="forcegrade"></xs:element>
+                                                                                                   <xs:element name="matrixcmfilled" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="vehiclemounted" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="bonus"></xs:element>
+                                                                                                   <xs:element name="improvementsource" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="children"></xs:element>
+                                                                                                   <xs:element name="notes"></xs:element>
+                                                                                                   <xs:element name="discountedcost" type="xs:string"></xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="notes"></xs:element>
+                                                               <xs:element name="discountedcost" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="qualities">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="quality" maxOccurs="unbounded">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="guid" type="xs:string"></xs:element>
+                                                               <xs:element name="name" type="xs:string"></xs:element>
+                                                               <xs:element name="extra"></xs:element>
+                                                               <xs:element name="bp" type="xs:int"></xs:element>
+                                                               <xs:element name="implemented" type="xs:string"></xs:element>
+                                                               <xs:element name="contributetolimit" type="xs:string"></xs:element>
+                                                               <xs:element name="metagenetic"></xs:element>
+                                                               <xs:element name="print" type="xs:string"></xs:element>
+                                                               <xs:element name="qualitytype" type="xs:string"></xs:element>
+                                                               <xs:element name="qualitysource" type="xs:string"></xs:element>
+                                                               <xs:element name="source" type="xs:string"></xs:element>
+                                                               <xs:element name="page" type="xs:int"></xs:element>
+                                                               <xs:element name="bonus"></xs:element>
+                                                               <xs:element name="notes"></xs:element>
+                                                               <xs:element name="id" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="lifestyles">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="lifestyle">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="guid" type="xs:string"></xs:element>
+                                                               <xs:element name="name" type="xs:string"></xs:element>
+                                                               <xs:element name="cost" type="xs:int"></xs:element>
+                                                               <xs:element name="dice" type="xs:int"></xs:element>
+                                                               <xs:element name="baselifestyle" type="xs:string"></xs:element>
+                                                               <xs:element name="multiplier" type="xs:int"></xs:element>
+                                                               <xs:element name="months" type="xs:int"></xs:element>
+                                                               <xs:element name="roommates" type="xs:int"></xs:element>
+                                                               <xs:element name="percentage" type="xs:int"></xs:element>
+                                                               <xs:element name="lifestylename"></xs:element>
+                                                               <xs:element name="purchased" type="xs:string"></xs:element>
+                                                               <xs:element name="comforts" type="xs:int"></xs:element>
+                                                               <xs:element name="area" type="xs:int"></xs:element>
+                                                               <xs:element name="security" type="xs:int"></xs:element>
+                                                               <xs:element name="comfortsentertainment" type="xs:int"></xs:element>
+                                                               <xs:element name="areaentertainment" type="xs:int"></xs:element>
+                                                               <xs:element name="securityentertainment" type="xs:int"></xs:element>
+                                                               <xs:element name="entertainment" type="xs:int"></xs:element>
+                                                               <xs:element name="baselifestyle" type="xs:string"></xs:element>
+                                                               <xs:element name="source" type="xs:string"></xs:element>
+                                                               <xs:element name="page" type="xs:int"></xs:element>
+                                                               <xs:element name="trustfund" type="xs:string"></xs:element>
+                                                               <xs:element name="type" type="xs:string"></xs:element>
+                                                               <xs:element name="sourceid" type="xs:string"></xs:element>
+                                                               <xs:element name="lifestylequalities">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="lifestylequality" maxOccurs="unbounded">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="guid" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="name" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="extra"></xs:element>
+                                                                                                   <xs:element name="cost" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="multiplier" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="lp" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="contributetolimit" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="print" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="lifestylequalitytype" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="lifestylequalitysource" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="source" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="page" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="bonus"></xs:element>
+                                                                                                   <xs:element name="notes"></xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="freegrids"></xs:element>
+                                                               <xs:element name="notes"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="gears">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="gear" maxOccurs="unbounded">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="guid" type="xs:string"></xs:element>
+                                                               <xs:element name="name" type="xs:string"></xs:element>
+                                                               <xs:element name="category" type="xs:string"></xs:element>
+                                                               <xs:element name="armorcapacity" type="xs:string"></xs:element>
+                                                               <xs:element name="maxrating" type="xs:int"></xs:element>
+                                                               <xs:element name="rating" type="xs:int"></xs:element>
+                                                               <xs:element name="qty" type="xs:int"></xs:element>
+                                                               <xs:element name="avail" type="xs:int"></xs:element>
+                                                               <xs:element name="cost" type="xs:int"></xs:element>
+                                                               <xs:element name="extra"></xs:element>
+                                                               <xs:element name="bonded" type="xs:string"></xs:element>
+                                                               <xs:element name="equipped" type="xs:string"></xs:element>
+                                                               <xs:element name="homenode" type="xs:string"></xs:element>
+                                                               <xs:element name="overclocked" type="xs:string"></xs:element>
+                                                               <xs:element name="bonus"></xs:element>
+                                                               <xs:element name="source" type="xs:string"></xs:element>
+                                                               <xs:element name="page" type="xs:int"></xs:element>
+                                                               <xs:element name="devicerating" type="xs:int"></xs:element>
+                                                               <xs:element name="attack" type="xs:int"></xs:element>
+                                                               <xs:element name="sleaze" type="xs:int"></xs:element>
+                                                               <xs:element name="dataprocessing" type="xs:int"></xs:element>
+                                                               <xs:element name="firewall" type="xs:int"></xs:element>
+                                                               <xs:element name="gearname"></xs:element>
+                                                               <xs:element name="children"></xs:element>
+                                                               <xs:element name="location"></xs:element>
+                                                               <xs:element name="notes"></xs:element>
+                                                               <xs:element name="discountedcost" type="xs:string"></xs:element>
+                                                               <xs:element name="active" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="vehicles">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="vehicle">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="guid" type="xs:string"></xs:element>
+                                                               <xs:element name="name" type="xs:string"></xs:element>
+                                                               <xs:element name="category" type="xs:string"></xs:element>
+                                                               <xs:element name="handling" type="xs:int"></xs:element>
+                                                               <xs:element name="offroadhandling" type="xs:int"></xs:element>
+                                                               <xs:element name="accel" type="xs:int"></xs:element>
+                                                               <xs:element name="speed" type="xs:int"></xs:element>
+                                                               <xs:element name="pilot" type="xs:int"></xs:element>
+                                                               <xs:element name="body" type="xs:int"></xs:element>
+                                                               <xs:element name="seats" type="xs:int"></xs:element>
+                                                               <xs:element name="armor" type="xs:int"></xs:element>
+                                                               <xs:element name="sensor" type="xs:int"></xs:element>
+                                                               <xs:element name="devicerating" type="xs:int"></xs:element>
+                                                               <xs:element name="avail" type="xs:int"></xs:element>
+                                                               <xs:element name="cost" type="xs:int"></xs:element>
+                                                               <xs:element name="addslots" type="xs:int"></xs:element>
+                                                               <xs:element name="modslots" type="xs:int"></xs:element>
+                                                               <xs:element name="powertrainmodslots" type="xs:int"></xs:element>
+                                                               <xs:element name="protectionmodslots" type="xs:int"></xs:element>
+                                                               <xs:element name="weaponmodslots" type="xs:int"></xs:element>
+                                                               <xs:element name="bodymodslots" type="xs:int"></xs:element>
+                                                               <xs:element name="electromagneticmodslots" type="xs:int"></xs:element>
+                                                               <xs:element name="cosmeticmodslots" type="xs:int"></xs:element>
+                                                               <xs:element name="source" type="xs:string"></xs:element>
+                                                               <xs:element name="page" type="xs:int"></xs:element>
+                                                               <xs:element name="physicalcmfilled" type="xs:int"></xs:element>
+                                                               <xs:element name="matrixcmfilled" type="xs:int"></xs:element>
+                                                               <xs:element name="vehiclename"></xs:element>
+                                                               <xs:element name="homenode" type="xs:string"></xs:element>
+                                                               <xs:element name="mods"></xs:element>
+                                                               <xs:element name="gears">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="gear">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="guid" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="name" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="category" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="capacity" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="armorcapacity" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="minrating" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="maxrating" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="rating" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="qty" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="avail" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="avail3"></xs:element>
+                                                                                                   <xs:element name="avail6"></xs:element>
+                                                                                                   <xs:element name="avail10"></xs:element>
+                                                                                                   <xs:element name="cost" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="cost3"></xs:element>
+                                                                                                   <xs:element name="cost6"></xs:element>
+                                                                                                   <xs:element name="cost10"></xs:element>
+                                                                                                   <xs:element name="extra"></xs:element>
+                                                                                                   <xs:element name="bonded" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="equipped" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="homenode" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="bonus"></xs:element>
+                                                                                                   <xs:element name="source" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="page" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="devicerating" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="gearname"></xs:element>
+                                                                                                   <xs:element name="matrixcmfilled" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="conditionmonitor" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="includedinparent" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="children"></xs:element>
+                                                                                                   <xs:element name="location"></xs:element>
+                                                                                                   <xs:element name="notes"></xs:element>
+                                                                                                   <xs:element name="discountedcost" type="xs:string"></xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="weapons"></xs:element>
+                                                               <xs:element name="notes"></xs:element>
+                                                               <xs:element name="discountedcost" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="metamagics"></xs:element>
+                           <xs:element name="arts"></xs:element>
+                           <xs:element name="enhancements"></xs:element>
+                           <xs:element name="critterpowers"></xs:element>
+                           <xs:element name="initiationgrades"></xs:element>
+                           <xs:element name="improvements">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="improvement" maxOccurs="unbounded">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="unique" type="xs:string"></xs:element>
+                                                               <xs:element name="improvedname"></xs:element>
+                                                               <xs:element name="sourcename" type="xs:string"></xs:element>
+                                                               <xs:element name="min" type="xs:int"></xs:element>
+                                                               <xs:element name="max" type="xs:int"></xs:element>
+                                                               <xs:element name="aug" type="xs:int"></xs:element>
+                                                               <xs:element name="augmax" type="xs:int"></xs:element>
+                                                               <xs:element name="val" type="xs:int"></xs:element>
+                                                               <xs:element name="rating" type="xs:int"></xs:element>
+                                                               <xs:element name="exclude"></xs:element>
+                                                               <xs:element name="improvementttype" type="xs:string"></xs:element>
+                                                               <xs:element name="improvementsource" type="xs:string"></xs:element>
+                                                               <xs:element name="custom" type="xs:string"></xs:element>
+                                                               <xs:element name="customname"></xs:element>
+                                                               <xs:element name="customid"></xs:element>
+                                                               <xs:element name="customgroup"></xs:element>
+                                                               <xs:element name="addtorating" type="xs:string"></xs:element>
+                                                               <xs:element name="enabled" type="xs:string"></xs:element>
+                                                               <xs:element name="order" type="xs:int"></xs:element>
+                                                               <xs:element name="notes"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="expenses">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="expense" maxOccurs="unbounded">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="guid" type="xs:string"></xs:element>
+                                                               <xs:element name="date" type="xs:dateTime"></xs:element>
+                                                               <xs:element name="amount" type="xs:int"></xs:element>
+                                                               <xs:element name="reason" type="xs:string"></xs:element>
+                                                               <xs:element name="type" type="xs:string"></xs:element>
+                                                               <xs:element name="refund" type="xs:string"></xs:element>
+                                                               <xs:element name="undo">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="karmatype" type="xs:string"></xs:element>
+                                                                                 <xs:element name="nuyentype" type="xs:string"></xs:element>
+                                                                                 <xs:element name="objectid"></xs:element>
+                                                                                 <xs:element name="qty" type="xs:int"></xs:element>
+                                                                                 <xs:element name="extra"></xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="locations"></xs:element>
+                           <xs:element name="armorbundles"></xs:element>
+                           <xs:element name="weaponlocations"></xs:element>
+                           <xs:element name="improvementgroups"></xs:element>
+                           <xs:element name="calendar"></xs:element>
+                           <xs:element name="sources">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="source" maxOccurs="unbounded" type="xs:string"></xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                     </xs:sequence>
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>
