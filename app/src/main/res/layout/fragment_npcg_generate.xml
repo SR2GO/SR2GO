@@ -1,63 +1,244 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <android.support.v4.widget.NestedScrollView
+<layout>
+    <data>
+        <variable name="character" type="de.arsartificia.dev.sr2go.Character"/>
+    </data>
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <LinearLayout
+
+        <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <Button
-                android:id="@+id/button_name"
-                style="@style/BigButton"
+            android:layout_height="match_parent"
+            android:paddingTop="5dp">
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/button_gender"
-                style="@style/BigButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/button_age"
-                style="@style/BigButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/button_metatype"
-                style="@style/BigButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/button_features"
-                style="@style/BigButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/button_special"
-                style="@style/BigButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <ImageView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_shake"
-                android:scaleType="center"
-                android:layout_gravity="center_horizontal"/>
+                android:orientation="vertical">
 
-        </LinearLayout>
-    </android.support.v4.widget.NestedScrollView>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_fav"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@drawable/ic_star"/>
+                    <Button
+                        android:id="@+id/buttonFirstName"
+                        style="@style/BigButton"
+                        android:text="@{character.firstname}"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp" />
 
-</android.support.design.widget.CoordinatorLayout>
+                    <Button
+                        android:id="@+id/buttonLastName"
+                        style="@style/BigButton"
+                        android:text="@{character.lastname}"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/buttonNickName"
+                    style="@style/BigButton"
+                    android:text="@{character.nickname}"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/buttonAge"
+                        style="@style/BigButton"
+                        android:text="@{character.age}"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp" />
+
+                    <Button
+                        android:id="@+id/buttonGender"
+                        style="@style/BigButton"
+                        android:text="@{character.gender}"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#e5e5e5" />
+
+                <Button
+                    android:id="@+id/buttonMood"
+                    style="@style/BigButton"
+                    android:text="@{character.personal.mood}"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/buttonMembership"
+                        style="@style/BigButton"
+                        android:text="@{character.personal.membership}"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp" />
+
+                    <Button
+                        android:id="@+id/buttonEthics"
+                        style="@style/BigButton"
+                        android:text="@{character.personal.ethics}"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/buttonPersonalSpecial"
+                        style="@style/BigButton"
+                        android:text="@{character.personal.personalSpecial}"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp" />
+
+                    <Button
+                        android:id="@+id/buttonRelationship"
+                        style="@style/BigButton"
+                        android:text="@{character.personal.relationship}"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#e5e5e5" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/buttonEyes"
+                        style="@style/BigButton"
+                        android:text="@{character.visuals.eyes}"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp" />
+
+                    <Button
+                        android:id="@+id/buttonHair"
+                        style="@style/BigButton"
+                        android:text="@{character.visuals.hair}"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/buttonFace"
+                        style="@style/BigButton"
+                        android:text="@{character.visuals.face}"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp" />
+
+                    <Button
+                        android:id="@+id/buttonVisualsSpecial"
+                        style="@style/BigButton"
+                        android:text="@{character.visuals.visualsSpecial}"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/button_weight"
+                        style="@style/BigButton"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp" />
+
+                    <Button
+                        android:id="@+id/button_height"
+                        style="@style/BigButton"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/button_figure"
+                        style="@style/BigButton"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp" />
+
+                    <Button
+                        android:id="@+id/button_bodySpecial"
+                        style="@style/BigButton"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_shake"
+                    android:scaleType="center"
+                    android:layout_gravity="center_horizontal"/>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_fav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@drawable/ic_star"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

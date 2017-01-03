@@ -4,6 +4,7 @@ import android.util.Log;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.net.URI;
 import java.util.HashSet;
 
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
@@ -53,11 +54,11 @@ public class Character {
     }
 
     public void setNickname(String nickname) {
-        this.nickname = nickname;
+        this.nickname = nickname;   
     }
 
-    public int getAge() {
-        return age;
+    public String getAge() {
+        return ""+age;
     }
 
     public void setAge(int age) {
@@ -90,7 +91,27 @@ public class Character {
     //endregion
 
     private Character() {}
-    
+
+    public static Character getSample() {
+        Character sample = new Character();
+        sample.firstname = "John";
+        sample.lastname = "Doe";
+        sample.nickname = "The Thunder";
+        sample.age = 32;
+        sample.gender = "male";
+        sample.visuals = new Visuals();
+        sample.visuals.eyesList.add("blue");
+        sample.visuals.faceList.add("oval");
+        sample.visuals.hairList.add("bright green");
+        sample.visuals.specialList.add("Thunderbolt tattoo");
+        sample.personal = new Personal();
+        sample.personal.ethicsList.add("Improve the world!");
+        sample.personal.moodList.add("Happy");
+        sample.personal.relationshipList.add("Lives with his grandparents");
+        sample.personal.specialList.add("Stutters");
+        return sample;
+    }
+
     public void save() {
         // // TODO: 12/1/16 Handle saving
         this.toServer();
@@ -140,7 +161,7 @@ public class Character {
         protected Character doInBackground(Void... voids) {
 
             try {
-                final String url = context.mServerAddress;
+                final String url = "http://"+context.mServerAddress+":8080/npc/1";
                 RestTemplate restTemplate = new RestTemplate();
                 restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
                 return restTemplate.getForObject(url, Character.class);

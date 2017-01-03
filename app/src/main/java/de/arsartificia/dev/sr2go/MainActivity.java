@@ -38,13 +38,15 @@ public class MainActivity extends AppCompatActivity
     private Sensor mAccelerometer;
     private ShakeDetector mShakeDetector;
     private Fragment mCurrentFragment;
-    public String mServerAddress = "localhost";
+    public String mServerAddress = "10.0.2.2";
     public HashSet<Character> mCharacters;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        loadCharacters();
 
         mCurrentFragment = new MainFragment();
         switchFragment();
@@ -76,10 +78,6 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        mCharacters = new HashSet<>();
-
-        loadCharacters();
     }
 
     protected void loadCharacters() {
