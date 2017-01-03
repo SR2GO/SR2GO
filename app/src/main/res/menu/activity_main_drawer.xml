@@ -20,6 +20,15 @@
         </menu>
     </item>
 
+    <item android:title="Equipment Database">
+        <menu>
+            <item
+                android:id="@+id/nav_arsenal"
+                android:icon="@drawable/ic_scissor"
+                android:title="Arsenal" />
+        </menu>
+    </item>
+
     <item android:title="Communicate">
         <menu>
             <item

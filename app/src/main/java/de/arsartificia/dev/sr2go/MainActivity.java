@@ -165,6 +165,8 @@ public class MainActivity extends AppCompatActivity
             mCurrentFragment = new NPCGGenerateFragment();
         } else if (id == R.id.nav_npcgfavorite) {
             mCurrentFragment = new MainFragment();
+        } else if ( id == R.id.nav_arsenal) {
+            mCurrentFragment = new ArsenalFragment();
         } else if (id == R.id.nav_npcgstats) {
             mCurrentFragment = new MainFragment();
         }

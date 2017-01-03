@@ -54,7 +54,7 @@ public class Character {
     }
 
     public void setNickname(String nickname) {
-        this.nickname = nickname;   
+        this.nickname = nickname;
     }
 
     public String getAge() {
