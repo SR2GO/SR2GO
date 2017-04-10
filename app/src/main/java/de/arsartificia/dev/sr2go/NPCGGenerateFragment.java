@@ -10,11 +10,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import de.arsartificia.dev.sr2go.databinding.FragmentNpcgGenerateBinding;
 
 public class NPCGGenerateFragment extends Fragment {
 
     private MainActivity mainActivity;
+    private Unbinder unbinder;
+    @BindView(R.id.fab_fav) FloatingActionButton fab;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,6 +32,7 @@ public class NPCGGenerateFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         FragmentNpcgGenerateBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_npcg_generate, container, false);
         View view = binding.getRoot();
+        unbinder = ButterKnife.bind(this, view);
         if (mainActivity.mCharacters.size() > 0) {
             binding.setCharacter(mainActivity.mCharacters.iterator().next());
         } else {
@@ -39,7 +45,6 @@ public class NPCGGenerateFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         View view = getView();
-        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab_fav);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,5 +59,11 @@ public class NPCGGenerateFragment extends Fragment {
 
     public void onShake() {
         randomizeAll();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        unbinder.unbind();
     }
 }

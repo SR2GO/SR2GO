@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="BigButton" parent="Base.Widget.AppCompat.Button">
-        <item name="android:height">80dp</item>
+        <item name="android:layout_height">120dp</item>
         <item name="android:layout_marginLeft">10dp</item>
         <item name="android:layout_marginRight">10dp</item>
         <item name="android:layout_marginTop">2dp</item>
         <item name="android:layout_marginBottom">2dp</item>
+    </style>
+    <style name="BigTextView" parent="Base.Widget.AppCompat.AutoCompleteTextView">
+        <item name="android:layout_height">120dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:focusable">False</item>
     </style>
 </resources>

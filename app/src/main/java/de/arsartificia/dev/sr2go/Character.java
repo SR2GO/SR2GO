@@ -100,14 +100,15 @@ public class Character {
         sample.age = 32;
         sample.gender = "male";
         sample.visuals = new Visuals();
-        sample.visuals.eyesList.add("blue");
-        sample.visuals.faceList.add("oval");
-        sample.visuals.hairList.add("bright green");
+        sample.visuals.eyesList.add("Blue Eyes");
+        sample.visuals.faceList.add("Oval Face");
+        sample.visuals.hairList.add("Bright-Green, Short");
         sample.visuals.specialList.add("Thunderbolt tattoo");
         sample.personal = new Personal();
         sample.personal.ethicsList.add("Improve the world!");
+        sample.personal.membershipList.add("One Dollar Stripclub");
         sample.personal.moodList.add("Happy");
-        sample.personal.relationshipList.add("Lives with his grandparents");
+        sample.personal.relationshipList.add("Lives with his parents");
         sample.personal.specialList.add("Stutters");
         return sample;
     }

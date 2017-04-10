@@ -83,74 +83,87 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp" />
 
+                <Button
+                    android:id="@+id/buttonMembershipAndEthics"
+                    android:layout_width="match_parent"
+                    style="@style/BigButton"
+                    android:text="Membership and Ethics :"
+                    android:textAlignment="center"
+                    android:layout_height="42dp"/>
+
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <Button
-                        android:id="@+id/buttonMembership"
-                        style="@style/BigButton"
+                    <TextView
                         android:text="@{character.personal.membership}"
+                        style="@style/BigTextView"
                         android:layout_weight="0.5"
                         android:layout_width="0dp"
                         android:layout_height="42dp" />
 
-                    <Button
-                        android:id="@+id/buttonEthics"
-                        style="@style/BigButton"
+                    <TextView
                         android:text="@{character.personal.ethics}"
+                        style="@style/BigTextView"
                         android:layout_weight="0.5"
                         android:layout_width="0dp"
                         android:layout_height="42dp" />
 
                 </LinearLayout>
 
+                <Button
+                    android:id="@+id/buttonPersonalSpecialAndRelationship"
+                    android:layout_width="match_parent"
+                    style="@style/BigButton"
+                    android:text="Personal Traits and Relationship :"
+                    android:textAlignment="center"
+                    android:layout_height="42dp"/>
+
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <Button
-                        android:id="@+id/buttonPersonalSpecial"
-                        style="@style/BigButton"
+                    <TextView
                         android:text="@{character.personal.personalSpecial}"
+                        style="@style/BigTextView"
                         android:layout_weight="0.5"
                         android:layout_width="0dp"
                         android:layout_height="42dp" />
 
-                    <Button
-                        android:id="@+id/buttonRelationship"
-                        style="@style/BigButton"
+                    <TextView
                         android:text="@{character.personal.relationship}"
+                        style="@style/BigTextView"
                         android:layout_weight="0.5"
                         android:layout_width="0dp"
                         android:layout_height="42dp" />
 
                 </LinearLayout>
 
-                <View
+                <Button
+                    android:id="@+id/buttonHead"
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#e5e5e5" />
+                    style="@style/BigButton"
+                    android:text="Head :"
+                    android:textAlignment="center"
+                    android:layout_height="42dp"/>
 
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <Button
-                        android:id="@+id/buttonEyes"
-                        style="@style/BigButton"
+                    <TextView
                         android:text="@{character.visuals.eyes}"
+                        style="@style/BigTextView"
                         android:layout_weight="0.5"
                         android:layout_width="0dp"
                         android:layout_height="42dp" />
 
-                    <Button
-                        android:id="@+id/buttonHair"
-                        style="@style/BigButton"
+                    <TextView
                         android:text="@{character.visuals.hair}"
+                        style="@style/BigTextView"
                         android:layout_weight="0.5"
                         android:layout_width="0dp"
                         android:layout_height="42dp" />
@@ -162,18 +175,45 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <Button
-                        android:id="@+id/buttonFace"
-                        style="@style/BigButton"
+                    <TextView
                         android:text="@{character.visuals.face}"
+                        style="@style/BigTextView"
                         android:layout_weight="0.5"
                         android:layout_width="0dp"
                         android:layout_height="42dp" />
 
-                    <Button
-                        android:id="@+id/buttonVisualsSpecial"
-                        style="@style/BigButton"
+                    <TextView
                         android:text="@{character.visuals.visualsSpecial}"
+                        style="@style/BigTextView"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/buttonBody"
+                    android:layout_width="match_parent"
+                    style="@style/BigButton"
+                    android:text="Body :"
+                    android:textAlignment="center"
+                    android:layout_height="42dp"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="weight"
+                        style="@style/BigTextView"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp" />
+
+                    <TextView
+                        android:text="height"
+                        style="@style/BigTextView"
                         android:layout_weight="0.5"
                         android:layout_width="0dp"
                         android:layout_height="42dp" />
@@ -185,37 +225,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <Button
-                        android:id="@+id/button_weight"
-                        style="@style/BigButton"
+                    <TextView
+                        android:text="figure"
+                        style="@style/BigTextView"
                         android:layout_weight="0.5"
                         android:layout_width="0dp"
                         android:layout_height="42dp" />
 
-                    <Button
-                        android:id="@+id/button_height"
-                        style="@style/BigButton"
-                        android:layout_weight="0.5"
-                        android:layout_width="0dp"
-                        android:layout_height="42dp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <Button
-                        android:id="@+id/button_figure"
-                        style="@style/BigButton"
-                        android:layout_weight="0.5"
-                        android:layout_width="0dp"
-                        android:layout_height="42dp" />
-
-                    <Button
-                        android:id="@+id/button_bodySpecial"
-                        style="@style/BigButton"
+                    <TextView
+                        android:text="special"
+                        style="@style/BigTextView"
                         android:layout_weight="0.5"
                         android:layout_width="0dp"
                         android:layout_height="42dp" />
